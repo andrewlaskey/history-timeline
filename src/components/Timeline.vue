@@ -3,7 +3,7 @@ import { yearToCalendarYear, calendarYearToYear } from '../common/convert-year'
 import { events } from '../data/events'
 import { people } from '../data/people'
 import { states } from '../data/states'
-import { DataPoint } from '../types/DataPoint'
+import { Category, DataPoint, Kind } from '../types/DataPoint'
 
 const totalYears = 12000
 const range = 500
@@ -17,9 +17,28 @@ const entryStyle = (entry: DataPoint): Record<string, unknown> => {
   const top = entryPosition(entry.year)
   const height = entry.range ? `${entry.range}px` : 'auto'
 
+  // let startLeft = entry.kind === Kind.EVENT ? 120 : 300
+  let startLeft = 120
+
+  switch (entry.category) {
+    case Category.ARCHEOLOGICAL:
+      startLeft += 80
+      break
+    case Category.NATURE:
+      startLeft += 5
+      break
+    case Category.PERSON:
+      startLeft += 180
+      break
+    case Category.POLITICAL:
+      startLeft += 340
+      break
+  }
+
   return {
     top,
     height,
+    left: `${startLeft}px`,
   }
 }
 
@@ -79,41 +98,57 @@ const dataPoints = [...events, ...people, ...states]
 .range {
   position: absolute;
   padding: 4px 8px;
-  border-radius: 2px;
+  border-top: 2px solid;
 }
 
 .event a,
 .range a {
   color: inherit;
+  position: relative;
+  display: block;
+  transform: translateY(calc(-100% - 8px));
+  text-decoration: none;
 }
 
-.event {
-  left: 150px;
+.event:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
 }
 
 .range {
-  left: 250px;
-}
-.range.political {
-  left: 400px;
+  border-left: 2px solid;
 }
 
 .nature {
-  background-color: #91e5b4;
-  color: black;
+  border-color: #91e5b4;
 }
 
+.event.nature:before {
+  background-color: #91e5b4;
+}
 .archeological {
+  border-color: #e5b391;
+}
+
+.event.archeological:before {
   background-color: #e5b391;
-  color: black;
 }
 
 .political {
+  border-color: #de91e5;
+}
+
+.event.political::before {
   background-color: #de91e5;
-  color: black;
 }
 
 .person {
-  background-color: rgb(0, 132, 255);
+  border-color: rgb(0, 132, 255);
 }
 </style>

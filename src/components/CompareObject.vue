@@ -35,7 +35,7 @@ const move = (event: PointerEvent): void => {
     class="compare-object"
     :class="{ active: isMoving }"
   >
-    {{ props.label }}
+    <span>{{ props.label }}</span>
   </div>
 </template>
 
@@ -45,11 +45,20 @@ const move = (event: PointerEvent): void => {
   height: 300px;
   width: 100px;
   transform: translate(-50px, -150px);
-  background: rgb(81, 209, 248);
+  border: 2px solid rgb(81, 209, 248);
+  background-color: rgb(81, 209, 248, 0.5);
   cursor: pointer;
 }
 
 .compare-object.active {
-  background: green;
+  border: 2px solid rgb(79, 197, 55);
+  background-color: rgb(79, 197, 55, 0.5);
+}
+
+span {
+  display: block;
+  position: relative;
+  transform: translateY(calc(-100% - 8px));
+  user-select: none;
 }
 </style>

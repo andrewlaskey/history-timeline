@@ -41,4 +41,36 @@ export const people: DataPoint[] = [
     category: Category.PERSON,
     range: 81
   },
+  {
+    label: 'Marco Polo',
+    link: 'https://en.wikipedia.org/wiki/Marco_Polo',
+    year: '1254 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 69
+  },
+  {
+    label: 'Kennewick Man',
+    link: 'https://en.wikipedia.org/wiki/Kennewick_Man',
+    year: '7560 BCE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 45
+  },
+  {
+    label: 'Hammurabi',
+    link: 'https://en.wikipedia.org/wiki/Hammurabi',
+    year: '1810 BCE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 60
+  },
+  {
+    label: 'Plato',
+    link: 'https://en.wikipedia.org/wiki/Plato',
+    year: '428 BCE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 80
+  },
 ];
