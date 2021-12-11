@@ -64,7 +64,7 @@ const dataPoints = [...events, ...people, ...states]
     #9198e5 100px
   );
   background-size: 50px 100px;
-  background-repeat-x: no-repeat;
+  background-repeat: repeat-y;
 }
 
 .grid-line {
