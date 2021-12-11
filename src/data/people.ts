@@ -73,4 +73,20 @@ export const people: DataPoint[] = [
     category: Category.PERSON,
     range: 80
   },
+  {
+    label: 'Joan of Arc',
+    link: 'https://en.wikipedia.org/wiki/Joan_of_Arc',
+    year: '1412 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 19
+  },
+  {
+    label: 'Genghis Khan',
+    link: 'https://en.wikipedia.org/wiki/Genghis_Khan',
+    year: '1155 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 72
+  },
 ];

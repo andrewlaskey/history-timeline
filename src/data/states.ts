@@ -25,4 +25,28 @@ export const states: DataPoint[] = [
     category: Category.POLITICAL,
     range: 505
   },
+  {
+    label: 'Mongol Empire',
+    link: 'https://en.wikipedia.org/wiki/Mongol_Empire',
+    year: '1206 CE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 88
+  },
+  {
+    label: 'Mongol Empire',
+    link: 'https://en.wikipedia.org/wiki/Mongol_Empire',
+    year: '1206 CE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 88
+  },
+  {
+    label: 'First Persian Empire',
+    link: 'https://en.wikipedia.org/wiki/Achaemenid_Empire',
+    year: '553 BCE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 220
+  }
 ];

@@ -19,7 +19,7 @@ const entryStyle = (entry: DataPoint): Record<string, unknown> => {
 
   // let startLeft = entry.kind === Kind.EVENT ? 120 : 300
   let startLeft = 120
-
+  const wiggle = Math.random() * 50 * (Math.random() < 0.5 ? 1 : -1)
   switch (entry.category) {
     case Category.ARCHEOLOGICAL:
       startLeft += 80
@@ -38,7 +38,7 @@ const entryStyle = (entry: DataPoint): Record<string, unknown> => {
   return {
     top,
     height,
-    left: `${startLeft}px`,
+    left: `${startLeft + wiggle}px`,
   }
 }
 
@@ -108,6 +108,7 @@ const dataPoints = [...events, ...people, ...states]
   display: block;
   transform: translateY(calc(-100% - 8px));
   text-decoration: none;
+  font-size: 12px;
 }
 
 .event:before {
