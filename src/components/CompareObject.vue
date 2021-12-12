@@ -23,13 +23,18 @@ const move = (event: PointerEvent): void => {
     posY.value = posY.value + event.movementY
   }
 }
+
+const toggleActive = (active: boolean): void => {
+  isMoving.value = active
+  document.body.classList.toggle('is-fixed', active)
+}
 </script>
 
 <template>
   <div
-    @pointerdown="isMoving = true"
-    @pointerup="isMoving = false"
-    @pointerleave="isMoving = false"
+    @pointerdown="toggleActive(true)"
+    @pointerup="toggleActive(false)"
+    @pointerleave="toggleActive(false)"
     @pointermove="move"
     :style="calcStyle"
     class="compare-object"

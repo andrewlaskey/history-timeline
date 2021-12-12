@@ -74,6 +74,10 @@ body {
   margin: 0;
 }
 
+body.is-fixed {
+  touch-action: none;
+}
+
 #app {
   position: relative;
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -82,7 +86,7 @@ body {
   text-align: center;
   color: #dde5ee;
   background: #151618;
-  padding: 60px 0;
+  padding: 60px 60px 220px;
 }
 
 .select-compare {
