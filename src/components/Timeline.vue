@@ -69,7 +69,7 @@ const dataPoints = [...events, ...people, ...states]
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 .timeline {
   position: relative;
   margin: 0 auto;
@@ -92,6 +92,7 @@ const dataPoints = [...events, ...people, ...states]
   right: 0;
   border-top: 1px solid;
   text-align: left;
+  user-select: none;
 }
 
 .event,
@@ -99,6 +100,16 @@ const dataPoints = [...events, ...people, ...states]
   position: absolute;
   padding: 4px 8px;
   border-top: 2px solid;
+
+  &:hover,
+  &:focus,
+  &:active {
+    z-index: 999;
+
+    a {
+      background: #151618c4;
+    }
+  }
 }
 
 .event a,
@@ -109,6 +120,7 @@ const dataPoints = [...events, ...people, ...states]
   transform: translateY(calc(-100% - 8px));
   text-decoration: none;
   font-size: 12px;
+  user-select: none;
 }
 
 .event:before {
