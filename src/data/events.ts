@@ -110,4 +110,19 @@ export const events: DataPoint[] = [
     category: Category.POLITICAL,
     range: 246
   },
+  {
+    label: 'Earliest evidence steel making',
+    link: 'https://en.wikipedia.org/wiki/Kaman-Kaleh%C3%B6y%C3%BCk',
+    year: '1800 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Circumference of Earth calculated',
+    link: 'https://en.wikipedia.org/wiki/Earth%27s_circumference',
+    year: '240 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+    
 ];
