@@ -124,5 +124,12 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
+  {
+    label: 'Earliest written sources of Gilgamesh epic',
+    link: 'https://en.wikipedia.org/wiki/Epic_of_Gilgamesh',
+    year: '2100 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
     
 ];
