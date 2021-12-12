@@ -75,6 +75,8 @@ body {
 }
 
 body.is-fixed {
+  overflow: hidden;
+  height: 100%;
   touch-action: none;
 }
 
