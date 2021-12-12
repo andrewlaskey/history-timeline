@@ -138,4 +138,12 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
+  {
+    label: 'Magellan Expedition',
+    link: 'https://en.wikipedia.org/wiki/Magellan_expedition',
+    year: '1519 CE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 3
+  },
 ];
