@@ -89,4 +89,12 @@ export const people: DataPoint[] = [
     category: Category.PERSON,
     range: 72
   },
+  {
+    label: 'Leif Erikson',
+    link: 'https://en.wikipedia.org/wiki/Leif_Erikson',
+    year: '970 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 50
+  },
 ];
