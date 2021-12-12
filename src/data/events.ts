@@ -131,5 +131,11 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
-    
+    {
+    label: 'Kish tablet: oldest written document',
+    link: 'https://en.wikipedia.org/wiki/Kish_tablet',
+    year: '3200 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
 ];
