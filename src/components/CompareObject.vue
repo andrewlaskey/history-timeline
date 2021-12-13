@@ -42,9 +42,9 @@ const toggleActive = (active: boolean): void => {
   <div
     @pointerdown="toggleActive(true)"
     @pointerup="toggleActive(false)"
-    @pointerleave="toggleActive(false)"
     @pointermove="move"
     @touchmove="touchMove"
+    @touchend="toggleActive(false)"
     :style="calcStyle"
     class="compare-object"
     :class="{ active: isMoving }"
