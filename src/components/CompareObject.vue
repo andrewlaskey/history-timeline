@@ -24,6 +24,14 @@ const move = (event: PointerEvent): void => {
   }
 }
 
+const touchMove = (event: TouchEvent): void => {
+  if (isMoving.value) {
+    const touch = event.targetTouches[0]
+    posX.value = touch.pageX
+    posY.value = touch.pageY
+  }
+}
+
 const toggleActive = (active: boolean): void => {
   isMoving.value = active
   document.body.classList.toggle('is-fixed', active)
@@ -36,6 +44,7 @@ const toggleActive = (active: boolean): void => {
     @pointerup="toggleActive(false)"
     @pointerleave="toggleActive(false)"
     @pointermove="move"
+    @touchmove="touchMove"
     :style="calcStyle"
     class="compare-object"
     :class="{ active: isMoving }"
