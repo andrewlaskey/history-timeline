@@ -146,4 +146,11 @@ export const events: DataPoint[] = [
     category: Category.POLITICAL,
     range: 3
   },
+  {
+    label: 'Last mammoths go extinct',
+    link: 'https://en.wikipedia.org/wiki/Wrangel_Island',
+    year: '2000 BCE',
+    kind: Kind.EVENT,
+    category: Category.NATURE
+  },
 ];
