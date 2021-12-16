@@ -153,4 +153,11 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.NATURE
   },
+  {
+    label: 'Byblos: oldest continuously inhabited city',
+    link: 'https://en.wikipedia.org/wiki/Byblos',
+    year: '8000 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
 ];
