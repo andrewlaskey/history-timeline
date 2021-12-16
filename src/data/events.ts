@@ -160,4 +160,11 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
+  {
+    label: 'End of African humid period',
+    link: 'https://en.wikipedia.org/wiki/African_humid_period',
+    year: '3400 BCE',
+    kind: Kind.EVENT,
+    category: Category.NATURE
+  },
 ];
