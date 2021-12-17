@@ -35,7 +35,7 @@ export const states: DataPoint[] = [
   },
   {
     label: 'Egypt Middle Kingdom',
-    link: 'https://en.wikipedia.org/wiki/Middle_Kingdom_of_Egypt,
+    link: 'https://en.wikipedia.org/wiki/Middle_Kingdom_of_Egypt',
     year: '2055 BCE',
     kind: Kind.RANGE,
     category: Category.POLITICAL,
