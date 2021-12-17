@@ -4,14 +4,14 @@ export const events: DataPoint[] = [
   {
     label: 'Göbekli Tepe',
     link: 'https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe',
-    year: '9500 BCE',
+    year: '9510 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
   {
     label: 'Doggerland submerged',
     link: 'https://en.wikipedia.org/wiki/Doggerland',
-    year: '6500 BCE',
+    year: '6520 BCE',
     kind: Kind.EVENT,
     category: Category.NATURE
   },
@@ -26,7 +26,7 @@ export const events: DataPoint[] = [
   {
     label: 'Megalithic Temples of Malta',
     link: 'https://en.wikipedia.org/wiki/Megalithic_Temples_of_Malta',
-    year: '3600 BCE',
+    year: '3605 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
@@ -62,35 +62,35 @@ export const events: DataPoint[] = [
   {
     label: 'Hawaii settled',
     link: 'https://en.wikipedia.org/wiki/Hawaii#First_human_settlement_%E2%80%93_Ancient_Hawai%CA%BBi_(1000%E2%80%931778)',
-    year: '1000 CE',
+    year: '1014 CE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
   {
     label: 'Earliest North American Mound Complex',
     link: 'https://en.wikipedia.org/wiki/Watson_Brake',
-    year: '3500 BCE',
+    year: '3507 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
   {
     label: 'Nanzhuangtou',
     link: 'https://en.wikipedia.org/wiki/Nanzhuangtou',
-    year: '8700 BCE',
+    year: '8706 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
   {
     label: 'Oldest dated copper smelting',
     link: 'https://en.wikipedia.org/wiki/Chalcolithic',
-    year: '5000 BCE',
+    year: '5020 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
   {
     label: 'Cultivation of barley and wheat',
     link: 'https://en.wikipedia.org/wiki/Prehistory#Neolithic',
-    year: '7000 BCE',
+    year: '7005 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
@@ -156,7 +156,7 @@ export const events: DataPoint[] = [
   {
     label: 'Byblos: oldest continuously inhabited city',
     link: 'https://en.wikipedia.org/wiki/Byblos',
-    year: '8000 BCE',
+    year: '8025 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
@@ -184,7 +184,7 @@ export const events: DataPoint[] = [
   {
     label: 'Horse domestication',
     link: 'https://en.wikipedia.org/wiki/Domestication_of_the_horse',
-    year: '3505 BCE',
+    year: '3495 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
