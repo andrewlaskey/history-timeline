@@ -144,5 +144,13 @@ export const people: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.PERSON,
     range: 32
+  },
+  {
+    label: 'Julius Caesar',
+    link: 'https://en.wikipedia.org/wiki/Julius_Caesar',
+    year: '100 BCE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 55
   }
 ];
