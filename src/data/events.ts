@@ -167,4 +167,18 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.NATURE
   },
+  {
+    label: 'Iliad composed',
+    link: 'https://en.wikipedia.org/wiki/Iliad#Date_and_textual_history',
+    year: '800 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Destruction of Troy VIIa',
+    link: 'https://en.wikipedia.org/wiki/Late_Bronze_Age_Troy',
+    year: '1180 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
 ];
