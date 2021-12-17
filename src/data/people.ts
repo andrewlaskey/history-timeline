@@ -97,4 +97,20 @@ export const people: DataPoint[] = [
     category: Category.PERSON,
     range: 50
   },
+  {
+    label: 'Ahmad ibn Fadlan',
+    link: 'https://en.wikipedia.org/wiki/Ahmad_ibn_Fadlan',
+    year: '879 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 81
+  },
+  {
+    label: 'Ibn Battuta',
+    link: 'https://en.wikipedia.org/wiki/Ibn_Battuta',
+    year: '1304 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 65
+  },
 ];
