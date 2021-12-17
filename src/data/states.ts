@@ -10,6 +10,14 @@ export const states: DataPoint[] = [
     range: 422
   },
   {
+    label: 'Roman Republic',
+    link: 'https://en.wikipedia.org/wiki/Roman_Empire',
+    year: '509 BCE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 482
+  },
+  {
     label: 'Inca Empire',
     link: 'https://en.wikipedia.org/wiki/Inca_Empire',
     year: '1438 CE',
