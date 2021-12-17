@@ -188,4 +188,33 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
+  {
+    label: 'Beowulf composed',
+    link: 'https://en.wikipedia.org/wiki/Beowulf',
+    year: '975 CE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Canterbury Tales written',
+    link: 'https://en.wikipedia.org/wiki/The_Canterbury_Tales',
+    year: '1387 CE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'University of Oxford founded',
+    link: 'https://en.wikipedia.org/wiki/University_of_Oxford',
+    year: '1096 CE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Eiffel Tower built',
+    link: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+    year: '1887 CE',
+    kind: Kind.RANGE,
+    category: Category.ARCHEOLOGICAL,
+    range: 2
+  },
 ];
