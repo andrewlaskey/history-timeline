@@ -181,4 +181,11 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
+  {
+    label: 'Horse domestication',
+    link: 'https://en.wikipedia.org/wiki/Domestication_of_the_horse',
+    year: '3505 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
 ];
