@@ -34,12 +34,12 @@ export const people: DataPoint[] = [
     range: 39
   },
   {
-    label: 'Queen Victoria',
-    link: 'https://en.wikipedia.org/wiki/Queen_Victoria',
-    year: '1819 CE',
+    label: 'Marie Curie',
+    link: 'https://en.wikipedia.org/wiki/Marie_Curie',
+    year: '1867 CE',
     kind: Kind.RANGE,
     category: Category.PERSON,
-    range: 81
+    range: 66
   },
   {
     label: 'Marco Polo',
@@ -128,5 +128,21 @@ export const people: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.PERSON,
     range: 78
+  },
+  {
+    label: 'Rachel Carson',
+    link: 'https://en.wikipedia.org/wiki/Rachel_Carson',
+    year: '1907 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 56
+  },
+  {
+    label: 'Theodora',
+    link: 'https://en.wikipedia.org/wiki/Theodora_(empress)',
+    year: '815 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 32
   }
 ];
