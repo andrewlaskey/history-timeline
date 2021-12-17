@@ -113,4 +113,20 @@ export const people: DataPoint[] = [
     category: Category.PERSON,
     range: 65
   },
+  {
+    label: 'Benjamin Franklin',
+    link: 'https://en.wikipedia.org/wiki/Benjamin_Franklin',
+    year: '1706 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 84
+  },
+  {
+    label: 'Frederick Douglass',
+    link: 'https://en.wikipedia.org/wiki/Frederick_Douglass',
+    year: '1817 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 78
+  }
 ];
