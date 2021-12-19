@@ -64,5 +64,13 @@ export const states: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.POLITICAL,
     range: 220
+  },
+  {
+    label: 'Akkadian Empire',
+    link: 'https://en.wikipedia.org/wiki/Akkadian_Empire',
+    year: '2334 BCE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 180
   }
 ];
