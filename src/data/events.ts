@@ -220,7 +220,7 @@ export const events: DataPoint[] = [
   {
     label: 'Bronze Age Collapse',
     link: 'https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse',
-    year: '1177 BCE',
+    year: '1203 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
