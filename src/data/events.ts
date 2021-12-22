@@ -154,7 +154,7 @@ export const events: DataPoint[] = [
     category: Category.NATURE
   },
   {
-    label: 'Byblos: oldest continuously inhabited city',
+    label: 'Byblos: oldest continuously inhabited settlement',
     link: 'https://en.wikipedia.org/wiki/Byblos',
     year: '8025 BCE',
     kind: Kind.EVENT,
@@ -235,6 +235,13 @@ export const events: DataPoint[] = [
     label: 'Terracotta Army',
     link: 'https://en.wikipedia.org/wiki/Terracotta_Army',
     year: '210 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Uruk peaks at ~40,000 residents',
+    link: 'https://en.wikipedia.org/wiki/Uruk',
+    year: '3104 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
