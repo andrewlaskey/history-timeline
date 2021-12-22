@@ -231,4 +231,11 @@ export const events: DataPoint[] = [
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
+  {
+    label: 'Terracotta Army',
+    link: 'https://en.wikipedia.org/wiki/Terracotta_Army',
+    year: '210 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
 ];
