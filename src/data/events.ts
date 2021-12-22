@@ -217,4 +217,18 @@ export const events: DataPoint[] = [
     category: Category.ARCHEOLOGICAL,
     range: 2
   },
+  {
+    label: 'Bronze Age Collapse',
+    link: 'https://en.wikipedia.org/wiki/Late_Bronze_Age_collapse',
+    year: '1177 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Stonehenge 3 II',
+    link: 'https://en.wikipedia.org/wiki/Stonehenge#Stonehenge_3_II_(2600_BC_to_2400_BC)',
+    year: '2590 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
 ];
