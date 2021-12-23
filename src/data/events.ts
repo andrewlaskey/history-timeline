@@ -250,7 +250,7 @@ export const events: DataPoint[] = [
     link: 'https://en.wikipedia.org/wiki/Plague_of_Justinian',
     year: '541 CE',
     kind: Kind.RANGE,
-    category: Category.ARCHEOLOGICAL,
+    category: Category.NATURE,
     range: 8
   },
   {
@@ -258,7 +258,7 @@ export const events: DataPoint[] = [
     link: 'https://en.wikipedia.org/wiki/Black_Death',
     year: '1346 CE',
     kind: Kind.RANGE,
-    category: Category.ARCHEOLOGICAL,
+    category: Category.NATURE,
     range: 7
   },
 ];
