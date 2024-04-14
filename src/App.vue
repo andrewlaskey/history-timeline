@@ -58,6 +58,7 @@ const clear = (): void => {
     :label="obj.label"
   />
   <div class="select-compare">
+    <a href="https://github.com/andrewlaskey/history-timeline" target="_blank">github.com/andrewlaskey/history-timeline</a>
     <select v-model="selection">
       <option v-for="obj in compareList" :key="obj.label">
         {{ obj.label }}
