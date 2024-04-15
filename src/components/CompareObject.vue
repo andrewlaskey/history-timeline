@@ -1,56 +1,50 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed } from "vue";
+import { Draggable } from "@braks/revue-draggable";
 
 const props = defineProps({
   range: Number,
   label: String,
-})
+});
 
-const posX = ref(window.innerWidth / 2)
-const posY = ref(document.documentElement.scrollTop + 200)
-const isMoving = ref(false)
+const posX = ref(window.innerWidth / 2);
+const posY = ref(document.documentElement.scrollTop + 200);
+const isMoving = ref(false);
 const calcStyle = computed((): Record<string, unknown> => {
   return {
-    top: posY.value + 'px',
-    left: posX.value + 'px',
+    top: posY.value + "px",
+    left: posX.value + "px",
     height: `${props.range || 80}px`,
-  }
-})
+  };
+});
 
 const move = (event: PointerEvent): void => {
   if (isMoving.value) {
-    posX.value = posX.value + event.movementX
-    posY.value = posY.value + event.movementY
+    posX.value = posX.value + event.movementX;
+    posY.value = posY.value + event.movementY;
   }
-}
+};
 
 const touchMove = (event: TouchEvent): void => {
   if (isMoving.value) {
-    const touch = event.targetTouches[0]
-    posX.value = touch.pageX
-    posY.value = touch.pageY
+    const touch = event.targetTouches[0];
+    posX.value = touch.pageX;
+    posY.value = touch.pageY;
   }
-}
+};
 
 const toggleActive = (active: boolean): void => {
-  isMoving.value = active
-  document.body.classList.toggle('is-fixed', active)
-}
+  isMoving.value = active;
+  document.body.classList.toggle("is-fixed", active);
+};
 </script>
 
 <template>
-  <div
-    @pointerdown="toggleActive(true)"
-    @pointerup="toggleActive(false)"
-    @pointermove="move"
-    @touchmove="touchMove"
-    @touchend="toggleActive(false)"
-    :style="calcStyle"
-    class="compare-object"
-    :class="{ active: isMoving }"
+  <Draggable
+    ><div class="compare-object" :style="calcStyle">
+      {{ props.label }}
+    </div></Draggable
   >
-    <span>{{ props.label }}</span>
-  </div>
 </template>
 
 <style scoped>
