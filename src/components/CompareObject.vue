@@ -10,7 +10,7 @@ const props = defineProps({
 const posX = ref(window.innerWidth / 2);
 const posY = ref(document.documentElement.scrollTop + 200);
 const isMoving = ref(false);
-const calcStyle = computed((): Record<string, unknown> => {
+const calcStyle = computed((): Record<string, any> => {
   return {
     top: posY.value + "px",
     left: posX.value + "px",

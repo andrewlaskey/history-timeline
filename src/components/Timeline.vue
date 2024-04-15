@@ -1,48 +1,48 @@
 <script setup lang="ts">
-import { yearToCalendarYear, calendarYearToYear } from '../common/convert-year'
-import { events } from '../data/events'
-import { people } from '../data/people'
-import { states } from '../data/states'
-import { Category, DataPoint, Kind } from '../types/DataPoint'
+import { yearToCalendarYear, calendarYearToYear } from "../common/convert-year";
+import { events } from "../data/events";
+import { people } from "../data/people";
+import { states } from "../data/states";
+import { Category, DataPoint, Kind } from "../types/DataPoint";
 
-const totalYears = 12000
-const range = 500
-const numGridLines = totalYears / range
+const totalYears = 12000;
+const range = 500;
+const numGridLines = totalYears / range;
 
 const entryPosition = (calendarYear: string): string => {
-  return `${calendarYearToYear(calendarYear, totalYears)}px`
-}
+  return `${calendarYearToYear(calendarYear, totalYears)}px`;
+};
 
-const entryStyle = (entry: DataPoint): Record<string, unknown> => {
-  const top = entryPosition(entry.year)
-  const height = entry.range ? `${entry.range}px` : 'auto'
+const entryStyle = (entry: DataPoint): Record<string, any> => {
+  const top = entryPosition(entry.year);
+  const height = entry.range ? `${entry.range}px` : "auto";
 
   // let startLeft = entry.kind === Kind.EVENT ? 120 : 300
-  let startLeft = 120
-  const wiggle = Math.random() * 50 * (Math.random() < 0.5 ? 1 : -1)
+  let startLeft = 120;
+  const wiggle = Math.random() * 50 * (Math.random() < 0.5 ? 1 : -1);
   switch (entry.category) {
     case Category.ARCHEOLOGICAL:
-      startLeft += 80
-      break
+      startLeft += 80;
+      break;
     case Category.NATURE:
-      startLeft += 5
-      break
+      startLeft += 5;
+      break;
     case Category.PERSON:
-      startLeft += 180
-      break
+      startLeft += 180;
+      break;
     case Category.POLITICAL:
-      startLeft += 340
-      break
+      startLeft += 340;
+      break;
   }
 
   return {
     top,
     height,
     left: `${startLeft + wiggle}px`,
-  }
-}
+  };
+};
 
-const dataPoints = [...events, ...people, ...states]
+const dataPoints = [...events, ...people, ...states];
 </script>
 
 <template>
@@ -124,7 +124,7 @@ const dataPoints = [...events, ...people, ...states]
 }
 
 .event:before {
-  content: '';
+  content: "";
   display: block;
   position: absolute;
   top: -5px;
