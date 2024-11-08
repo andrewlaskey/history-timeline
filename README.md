@@ -1,11 +1,5 @@
-# Vue 3 + Typescript + Vite
+# History Timeline
 
-This template should help get you started developing with Vue 3 and Typescript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a mini site I built in order to get a better perspective of time and recent human history. Events and historical figures are displayed on a page where each vertical pixel represents one year for the past 12,000 years.
 
-## Recommended IDE Setup
-
-- [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can enable Volar's `.vue` type support plugin by running `Volar: Switch TS Plugin on/off` from VSCode command palette.
+Check it out on Vercel [here](https://history-timeline-six.vercel.app/). Read some more notes I have about the motivations for the project [here](https://www.andrewlaskey.com/Andrew-Laskey-8f215a2f56104b2dae16c6d7f534f041?p=76201799db4b460b9be159bf3cdb8a07&pm=s)
