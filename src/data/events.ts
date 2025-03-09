@@ -43,7 +43,7 @@ export const events: DataPoint[] = [
     link: 'https://en.wikipedia.org/wiki/Moon_landing',
     year: '1969 CE',
     kind: Kind.EVENT,
-    category: Category.POLITICAL
+    category: Category.ARCHEOLOGICAL
   },
   {
     label: 'Pompeii eruption',
@@ -261,4 +261,19 @@ export const events: DataPoint[] = [
     category: Category.NATURE,
     range: 7
   },
+  {
+    label: 'First powered flight',
+    link: 'https://en.wikipedia.org/wiki/Wright_brothers#First_powered_flight',
+    year: '1903 CE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Methuselah Tree',
+    link: 'https://en.wikipedia.org/wiki/Methuselah_(pine_tree)',
+    year: '2833 BCE',
+    kind: Kind.RANGE,
+    category: Category.NATURE,
+    range: 4856
+  }
 ];

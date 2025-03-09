@@ -152,5 +152,13 @@ export const people: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.PERSON,
     range: 55
+  },
+  {
+    label: 'Samuel J. Seymour',
+    link: 'https://en.wikipedia.org/wiki/Samuel_J._Seymour',
+    year: '1860 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 96
   }
 ];
