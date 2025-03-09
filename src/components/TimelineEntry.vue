@@ -46,9 +46,9 @@ onMounted(() => {
 
     gsap.to(entry.value, {
         scrollTrigger: entry.value,
+        start: 'top 90%',
         opacity: 1,
         height: props.range ? props.range : undefined,
-        delay: 0.3,
         duration: 0.5,
         ease: 'power1.in'
     });
