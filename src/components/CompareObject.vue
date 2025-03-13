@@ -31,7 +31,10 @@ const centerElement = () => {
   const centerY = scrollY + (windowHeight / 2) - (elementHeight / 2);
   
   // Use GSAP to animate to center
-  gsap.to(draggableEl.value, {
+  gsap.fromTo(draggableEl.value, {
+    left: 0,
+    top: 0
+  },{
     left: centerX,
     top: centerY,
     duration: 0.5,
@@ -45,7 +48,7 @@ const centerElement = () => {
 const createDraggable = () => {
   Draggable.create(draggableEl.value, {
       type: "x,y",  // Allow dragging on both x and y axes
-      bounds: document.body,  // Optional: keep within the body
+      bounds: '.timeline',
       onDragStart: function() {
         // Optional: add active class when dragging starts
         this.target.classList.add('active');
@@ -59,12 +62,7 @@ const createDraggable = () => {
 
 onMounted(() => {
   if (draggableEl.value) {
-    gsap.set(draggableEl.value, {
-      left: 0,
-      top: 0,
-      height: props.range
-    });
-    centerElement();
+        centerElement();
   }
 });
 </script>
@@ -96,5 +94,6 @@ span {
   position: relative;
   transform: translateY(calc(-100% - 8px));
   user-select: none;
+  font-size: 0.8em;
 }
 </style>

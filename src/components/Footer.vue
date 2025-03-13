@@ -27,8 +27,8 @@ const compareList: Comparable[] = [
     range: 272,
     label: 'Avg. Greenland Shark Lifespan'
   },
-  ...people.map(({ range, label }) => ({ range: range || 80, label })),
-  ...states.map(({ range, label }) => ({ range: range || 80, label })),
+//   ...people.map(({ range, label }) => ({ range: range || 80, label })),
+//   ...states.map(({ range, label }) => ({ range: range || 80, label })),
 ]
 
 const addSelectedObj = () => {

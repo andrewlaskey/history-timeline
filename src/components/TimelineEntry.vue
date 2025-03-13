@@ -21,7 +21,7 @@ onMounted(() => {
     if (!entry.value) return;
 
     let startLeft = 5;
-    const wiggle = Math.random() * 5 * (Math.random() < 0.5 ? 1 : -1);
+    const wiggle = Math.random() * 10 * (Math.random() < 0.5 ? 1 : -1);
     switch (props.category) {
         case Category.ARCHEOLOGICAL:
         startLeft += 18;
