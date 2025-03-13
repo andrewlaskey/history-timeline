@@ -48,7 +48,8 @@ const dataPoints = [...events, ...people, ...states];
   position: relative;
   margin: 0 auto;
   height: 12000px;
-  width: 600px;
+  width: 100%;
+  max-width: 600px;
   background-color: rgb(32, 32, 32);
   background: repeating-linear-gradient(
     transparent,

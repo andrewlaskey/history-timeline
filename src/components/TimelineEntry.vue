@@ -20,26 +20,26 @@ const entry = useTemplateRef('entry');
 onMounted(() => {
     if (!entry.value) return;
 
-    let startLeft = 120;
-    const wiggle = Math.random() * 50 * (Math.random() < 0.5 ? 1 : -1);
+    let startLeft = 5;
+    const wiggle = Math.random() * 5 * (Math.random() < 0.5 ? 1 : -1);
     switch (props.category) {
         case Category.ARCHEOLOGICAL:
-        startLeft += 30;
+        startLeft += 18;
         break;
         case Category.NATURE:
-        startLeft += 5;
+        startLeft += 9;
         break;
         case Category.PERSON:
-        startLeft += 180;
+        startLeft += 35;
         break;
         case Category.POLITICAL:
-        startLeft += 340;
+        startLeft += 60;
         break;
     }
 
     gsap.set(entry.value, {
         top: props.top,
-        left: startLeft + wiggle,
+        left: `${startLeft + wiggle}%`,
         height: props.range ? 0 : undefined,
         opacity: 0
     });
