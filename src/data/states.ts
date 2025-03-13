@@ -72,5 +72,13 @@ export const states: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.POLITICAL,
     range: 180
+  },
+  {
+    label: 'Ottoman Empire',
+    link: 'https://en.wikipedia.org/wiki/Ottoman_Empire',
+    year: '1299 CE',
+    kind: Kind.RANGE,
+    category: Category.POLITICAL,
+    range: 623
   }
 ];

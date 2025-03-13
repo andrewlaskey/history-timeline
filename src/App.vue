@@ -21,9 +21,9 @@ const clear = (): void => {
 </script>
 
 <template>
-  <a class="info" href="https://github.com/andrewlaskey/history-timeline" target="_blank">
+  <a class="info" href="https://github.com/andrewlaskey/history-timeline/issues" target="_blank">
     <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
-    <span class="visually-hidden">github.com/andrewlaskey/history-timeline</span>
+    <span>Suggest an addition</span>
   </a>
   <h1>The Past 12,000 Years</h1>
   <h4>1 pixel = 1 year</h4>
@@ -71,6 +71,7 @@ body {
   top: 1em;
   text-align: left;
   color: #9198e5;
+  text-decoration: none;
 }
 
 .icon {
@@ -80,6 +81,7 @@ body {
   stroke-width: 0;
   stroke: currentColor;
   fill: currentColor;
+  margin-right: 0.3em;
 }
 
 .visually-hidden {

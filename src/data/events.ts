@@ -275,5 +275,12 @@ export const events: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.NATURE,
     range: 4856
+  },
+  {
+    label: 'Cascadia Earthquake',
+    link: 'https://en.wikipedia.org/wiki/1700_Cascadia_earthquake',
+    year: '1700 CE',
+    kind: Kind.EVENT,
+    category: Category.NATURE
   }
 ];
