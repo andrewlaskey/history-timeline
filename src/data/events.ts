@@ -282,5 +282,34 @@ export const events: DataPoint[] = [
     year: '1700 CE',
     kind: Kind.EVENT,
     category: Category.NATURE
+  },
+  {
+    label: 'Elephant bird goes extinct',
+    link: 'https://en.wikipedia.org/wiki/Elephant_bird',
+    year: '1028 CE',
+    kind: Kind.EVENT,
+    category: Category.NATURE
+  },
+  {
+    label: 'Horses go extinct in Americas',
+    link: 'https://en.wikipedia.org/wiki/Horses_in_the_United_States',
+    year: '8275 BCE',
+    kind: Kind.EVENT,
+    category: Category.NATURE
+  },
+  {
+    label: 'Oldest recorded supernova',
+    link: 'https://en.wikipedia.org/wiki/History_of_supernova_observation',
+    year: '185 CE',
+    kind: Kind.EVENT,
+    category: Category.NATURE
+  },
+  {
+    label: 'Moai statue carving tradition',
+    link: 'https://en.wikipedia.org/wiki/Moai',
+    year: '1250 CE',
+    kind: Kind.RANGE,
+    category: Category.ARCHEOLOGICAL,
+    range: 250
   }
 ];

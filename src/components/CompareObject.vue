@@ -33,10 +33,12 @@ const centerElement = () => {
   // Use GSAP to animate to center
   gsap.fromTo(draggableEl.value, {
     left: 0,
-    top: 0
+    top: 0,
+    height: 0
   },{
     left: centerX,
     top: centerY,
+    height: props.range,
     duration: 0.5,
     ease: "power2.out",
     onComplete: () => {

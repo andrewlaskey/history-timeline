@@ -20,7 +20,7 @@ const entry = useTemplateRef('entry');
 onMounted(() => {
     if (!entry.value) return;
 
-    let startLeft = 5;
+    let startLeft = 9;
     const wiggle = Math.random() * 10 * (Math.random() < 0.5 ? 1 : -1);
     switch (props.category) {
         case Category.ARCHEOLOGICAL:

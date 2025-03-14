@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { Comparable } from '../types/Comparable';
-import { people } from '../data/people'
-import { states } from '../data/states'
+import { compareList } from '../data/compareables';
 
 
 type Props = {
@@ -14,22 +13,6 @@ type Props = {
 
 const props = defineProps<Props>();
 
-const compareList: Comparable[] = [
-  {
-    range: 80,
-    label: 'Avg. Human Lifespan',
-  },
-  {
-    range: 246,
-    label: 'USA',
-  },
-  {
-    range: 272,
-    label: 'Avg. Greenland Shark Lifespan'
-  },
-//   ...people.map(({ range, label }) => ({ range: range || 80, label })),
-//   ...states.map(({ range, label }) => ({ range: range || 80, label })),
-]
 
 const addSelectedObj = () => {
     const compareObj = compareList.find(obj => obj.label === selection.value);
