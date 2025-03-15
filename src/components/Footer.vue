@@ -3,6 +3,7 @@ import { computed, ref } from 'vue';
 import { Comparable } from '../types/Comparable';
 import { compareList } from '../data/compareables';
 import ScaleSelector from './ScaleSelector.vue';
+import Drawer from './Drawer.vue';
 
 
 type Props = {
@@ -43,31 +44,33 @@ const selection = ref('Avg. Human Lifespan')
 <template>
     <div class="footer">
       <div class="footer-control">
-        <h3>Comparisons</h3>
-        <ul class="compare-selections">
-          <li
-          v-for="(compare, idx) in compareSelections"
-          :key="`${compare.label}-${idx}`"
-          >
-          <span>{{  compare.label }}</span>
-          <button @click="removeItem(idx)">
-              <span>x</span>
-          </button>
-          </li>
-        </ul>
-        <div class="compare-input">
-          <select v-model="selection">
-              <option v-for="obj in selectableCompareOptions" :key="obj.label">
-              {{ obj.label }}
-              </option>
-          </select>
-          <button @click="addSelectedObj">Add</button>
-          <button @click="clear">Clear All</button>
-        </div>
+        <Drawer title="Comparison">
+          <ul class="compare-selections">
+            <li
+            v-for="(compare, idx) in compareSelections"
+            :key="`${compare.label}-${idx}`"
+            >
+            <span>{{  compare.label }}</span>
+            <button @click="removeItem(idx)">
+                <span>x</span>
+            </button>
+            </li>
+          </ul>
+          <div class="compare-input">
+            <select v-model="selection">
+                <option v-for="obj in selectableCompareOptions" :key="obj.label">
+                {{ obj.label }}
+                </option>
+            </select>
+            <button @click="addSelectedObj">Add</button>
+            <button @click="clear">Clear All</button>
+          </div>
+        </Drawer>
       </div>
       <div class="footer-control">
-        <h3>Scale</h3>
-        <ScaleSelector v-model="localScale" />
+        <Drawer title="Scale">
+          <ScaleSelector v-model="localScale" />
+        </Drawer>
       </div>
   </div>
 </template>
@@ -83,18 +86,7 @@ const selection = ref('Avg. Human Lifespan')
   max-width: 28rem;
 }
 
-.footer-control {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: #151618;
-  border: 1px solid;
-  border-color: #dde5ee;
-
-  h3 {
-    margin-top: 0;
-  }
-
+.compare-input {
   button, select {
     margin: 0.2em;
     padding: 0.3em 0.8em;

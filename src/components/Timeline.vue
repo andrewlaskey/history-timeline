@@ -24,7 +24,7 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
         :key="n"
         :style="{ top: `${n * range}px` }"
       >
-        {{ n * range * scale }} ({{ yearToCalendarYear(n * range * scale, totalYears) }})
+        {{ (n * range * scale).toLocaleString() }} ({{ yearToCalendarYear(n * range * scale, totalYears) }})
       </div>
     </div>
 

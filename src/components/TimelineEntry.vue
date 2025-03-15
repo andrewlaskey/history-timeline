@@ -105,12 +105,18 @@ onUpdated(() => {
 </script>
 
 <template>
-    <div :class="[kind, category]" ref="entry">
+    <div class="timeline-entry" :class="[kind, category]" ref="entry">
         <a :href="link" target="_blank">{{ label }}</a>
     </div>
 </template>
 
 <style lang="scss" scoped>
+.timeline-entry {
+  &:hover {
+    z-index: 10;
+  }
+}
+
 .event,
 .range {
   position: absolute;
