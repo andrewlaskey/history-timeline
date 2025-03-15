@@ -1,26 +1,39 @@
 <script setup lang="ts">
-import { onMounted, useTemplateRef } from 'vue';
+import { computed, onBeforeUpdate, onMounted, onUpdated, useTemplateRef, watch } from 'vue';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Category } from '../types/DataPoint';
+import { Category, Kind } from '../types/DataPoint';
+import { calendarYearToYear } from '../common/convert-year';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const props = defineProps({
-    top: Number,
-    range: Number,
-    label: String,
-    category: String,
-    kind: String,
-    link: String
-});
+const props = defineProps<{
+  year: string,
+  range?: number,
+  label: string,
+  category: string,
+  kind: string,
+  link?: string,
+  scale: number,
+  totalYears: number
+}>();
 
 const entry = useTemplateRef('entry');
 
-onMounted(() => {
-    if (!entry.value) return;
+const rangeHeight = computed(() => {
+  if (props.range) {
+    return Math.floor(props.range * (1 / props.scale));
+  }
 
-    let startLeft = 9;
+  return undefined;
+});
+
+const top = computed(() => {
+  return Math.floor(calendarYearToYear(props.year, props.totalYears) * (1 / props.scale));
+});
+
+const left = () => {
+  let startLeft = 9;
     const wiggle = Math.random() * 10 * (Math.random() < 0.5 ? 1 : -1);
     switch (props.category) {
         case Category.ARCHEOLOGICAL:
@@ -37,22 +50,58 @@ onMounted(() => {
         break;
     }
 
+  return `${startLeft + wiggle}%`;
+};
+
+const show = computed(() => {
+  const timelineYear = calendarYearToYear(props.year, props.totalYears);
+
+  const isWithinTimelineRange = timelineYear > 0;
+
+  if (isWithinTimelineRange) {
+    return props.scale === 1 || props.kind == Kind.RANGE;
+  }
+
+  return false;
+});
+
+onMounted(() => {
+    if (!entry.value) return;
+
     gsap.set(entry.value, {
-        top: props.top,
-        left: `${startLeft + wiggle}%`,
-        height: props.range ? 0 : undefined,
-        opacity: 0
+        top: top.value,
+        left: left(),
+        height: rangeHeight.value,
+        autoAlpha: 0
     });
 
+    if (show.value) {
+      gsap.to(entry.value, {
+          scrollTrigger: entry.value,
+          autoAlpha: 1,
+          height: rangeHeight.value,
+          duration: 0.5,
+          ease: 'power1.in'
+      });
+    }
+});
+
+onBeforeUpdate(() => {
+  gsap.killTweensOf(entry.value);
+});
+
+onUpdated(() => {
+  if (show.value) {
     gsap.to(entry.value, {
-        scrollTrigger: entry.value,
-        start: 'top 90%',
-        opacity: 1,
-        height: props.range ? props.range : undefined,
-        duration: 0.5,
-        ease: 'power1.in'
-    });
-})
+          top: top.value,
+          left: left(),
+          height: rangeHeight.value,
+          autoAlpha: 1
+      });
+  } else {
+    gsap.to(entry.value, { autoAlpha: 0 })
+  }
+});
 </script>
 
 <template>

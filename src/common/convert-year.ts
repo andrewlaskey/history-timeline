@@ -1,6 +1,8 @@
 export const yearToCalendarYear = (year: number, startYear: number): string => {
   const isCE = year > startYear - 2000;
-  return isCE ? year - (startYear - 2000) + 'CE': startYear - 2000 - year + 'BCE';
+  return isCE ?
+    `${(year - (startYear - 2000)).toLocaleString()}CE`:
+    `${(startYear - 2000 - year).toLocaleString()}BCE`;
 }
 
 export const calendarYearToYear = (calendarYear: string, startYear: number): number => {

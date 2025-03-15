@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import { Comparable } from '../types/Comparable';
 import { compareList } from '../data/compareables';
+import ScaleSelector from './ScaleSelector.vue';
 
 
 type Props = {
@@ -9,10 +10,20 @@ type Props = {
     clear: () => void,
     addSelection: (obj: Comparable) => void,
     compareSelections: Comparable[]
+    scale: number,
+    totalYears: number
 }
 
 const props = defineProps<Props>();
 
+const emit = defineEmits<{
+  (e: 'update:scale', value: number): void;
+}>();
+
+const localScale = computed({
+  get: () => props.scale,
+  set: (value: number) => emit('update:scale', value)
+});
 
 const addSelectedObj = () => {
     const compareObj = compareList.find(obj => obj.label === selection.value);
@@ -22,54 +33,57 @@ const addSelectedObj = () => {
     }
 }
 
+const selectableCompareOptions = computed(() => {
+  return compareList.filter(compareable => compareable.range < props.totalYears);
+})
+
 const selection = ref('Avg. Human Lifespan')
 </script>
 
 <template>
     <div class="footer">
-        <div class="select-compare">
+      <div class="footer-control">
         <h3>Comparisons</h3>
         <ul class="compare-selections">
-            <li
-            v-for="(compare, idx) in compareSelections"
-            :key="`${compare.label}-${idx}`"
-            >
-            <span>{{  compare.label }}</span>
-            <button @click="removeItem(idx)">
-                <span>x</span>
-            </button>
-            </li>
+          <li
+          v-for="(compare, idx) in compareSelections"
+          :key="`${compare.label}-${idx}`"
+          >
+          <span>{{  compare.label }}</span>
+          <button @click="removeItem(idx)">
+              <span>x</span>
+          </button>
+          </li>
         </ul>
         <div class="compare-input">
-            <select v-model="selection">
-                <option v-for="obj in compareList" :key="obj.label">
-                {{ obj.label }}
-                </option>
-            </select>
-            <button @click="addSelectedObj">Add</button>
-            <button @click="clear">Clear All</button>
+          <select v-model="selection">
+              <option v-for="obj in selectableCompareOptions" :key="obj.label">
+              {{ obj.label }}
+              </option>
+          </select>
+          <button @click="addSelectedObj">Add</button>
+          <button @click="clear">Clear All</button>
         </div>
-    </div>
+      </div>
+      <div class="footer-control">
+        <h3>Scale</h3>
+        <ScaleSelector v-model="localScale" />
+      </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 .footer {
   position: fixed;
-  left: 0;
   right: 0;
   bottom: 0;
   display: flex;
-  flex-direction: column;
-
-  @media screen and (min-width: 600px) {
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
+  flex-direction: column-reverse;
+  width: 100%;
+  max-width: 28rem;
 }
 
-.select-compare {
+.footer-control {
   display: flex;
   flex-direction: column;
   padding: 1rem;

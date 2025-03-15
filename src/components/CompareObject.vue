@@ -1,16 +1,21 @@
 <script setup lang="ts">
-import { onMounted, useTemplateRef } from "vue";
+import { computed, onBeforeUpdate, onMounted, onUpdated, useTemplateRef } from "vue";
 import { gsap } from 'gsap';
 import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(Draggable);
 
-const props = defineProps({
-  range: Number,
-  label: String,
-});
+const props = defineProps<{
+  range: number,
+  label: string,
+  scale: number
+}>();
 
 const draggableEl = useTemplateRef('draggableEl');
+
+const height = computed(() => {
+  return Math.floor(props.range * (1 / props.scale));
+});
 
 const centerElement = () => {
   if (!draggableEl.value) return;
@@ -38,7 +43,7 @@ const centerElement = () => {
   },{
     left: centerX,
     top: centerY,
-    height: props.range,
+    height: height.value,
     duration: 0.5,
     ease: "power2.out",
     onComplete: () => {
@@ -66,6 +71,14 @@ onMounted(() => {
   if (draggableEl.value) {
         centerElement();
   }
+});
+
+onBeforeUpdate(() => {
+  gsap.killTweensOf(draggableEl.value);
+});
+
+onUpdated(() => {
+  gsap.to(draggableEl.value, { height: height.value });
 });
 </script>
 

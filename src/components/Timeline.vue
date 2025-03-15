@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import { yearToCalendarYear, calendarYearToYear } from "../common/convert-year";
+import { computed } from "vue";
+import { yearToCalendarYear } from "../common/convert-year";
 import { events } from "../data/events";
 import { people } from "../data/people";
 import { states } from "../data/states";
-import { Category, DataPoint, Kind } from "../types/DataPoint";
+import { ancient } from "../data/ancient";
 import TimelineEntry from './TimelineEntry.vue'
 
-const totalYears = 12000;
+const props = defineProps<{ totalYears: number, scale: number }>();
 const range = 500;
-const numGridLines = totalYears / range;
 
-const entryPosition = (calendarYear: string): number => {
-  return calendarYearToYear(calendarYear, totalYears);
-};
+const numGridLines = computed(() => props.totalYears / (range * props.scale));
 
-const dataPoints = [...events, ...people, ...states];
+const dataPoints = [...events, ...people, ...states, ...ancient];
 </script>
 
 <template>
@@ -24,21 +22,23 @@ const dataPoints = [...events, ...people, ...states];
         class="grid-line"
         v-for="n in numGridLines"
         :key="n"
-        :style="{ top: n * range + 'px' }"
+        :style="{ top: `${n * range}px` }"
       >
-        {{ n * range }} ({{ yearToCalendarYear(n * range, totalYears) }})
+        {{ n * range * scale }} ({{ yearToCalendarYear(n * range * scale, totalYears) }})
       </div>
     </div>
 
     <TimelineEntry
       v-for="entry in dataPoints"
       :key="entry.label"
-      :top="entryPosition(entry.year)"
+      :year="entry.year"
       :range="entry.range"
       :kind="entry.kind"
       :category="entry.category"
       :link="entry.link"
       :label="entry.label"
+      :scale="scale"
+      :total-years="totalYears"
     />
   </div>
 </template>

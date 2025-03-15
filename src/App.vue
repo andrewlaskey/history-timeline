@@ -1,11 +1,15 @@
 <script setup lang="ts">
-import { reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 import Timeline from './components/Timeline.vue'
 import CompareObject from './components/CompareObject.vue'
 import Footer from './components/Footer.vue'
 import { Comparable } from './types/Comparable'
+import ScaleSelector from './components/ScaleSelector.vue'
 
 const selected = reactive<Comparable[]>([])
+
+const scale = ref<number>(1);
+const totalYears = computed(() => 12000 * scale.value);
 
 const addSelection = (obj: Comparable): void => {
   selected.push(obj)
@@ -25,20 +29,23 @@ const clear = (): void => {
     <svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>
     <span>Suggest an addition</span>
   </a>
-  <h1>The Past 12,000 Years</h1>
-  <h4>1 pixel = 1 year</h4>
-  <Timeline />
+  <h1>The Past {{ totalYears.toLocaleString() }} Years</h1>
+  <ScaleSelector v-model="scale" />
+  <Timeline :total-years="totalYears" :scale="scale"/>
   <CompareObject
     v-for="obj in selected"
     :key="obj.label"
     :range="obj.range"
     :label="obj.label"
+    :scale="scale"
   />
   <Footer
     :clear="clear"
     :compare-selections="selected"
     :remove-item="removeItem"
     :add-selection="addSelection"
+    v-model:scale="scale"
+    :total-years="totalYears"
   />
 </template>
 

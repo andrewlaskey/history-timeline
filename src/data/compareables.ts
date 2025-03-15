@@ -16,6 +16,10 @@ export const compareList: Comparable[] = [
     {
         range: 164,
         label: 'Orbit of Neptune'
+    },
+    {
+      range: 26000,
+      label: 'Axial precession'
     }
   //   ...people.map(({ range, label }) => ({ range: range || 80, label })),
   //   ...states.map(({ range, label }) => ({ range: range || 80, label })),
