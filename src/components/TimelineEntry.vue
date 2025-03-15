@@ -53,10 +53,14 @@ const left = () => {
   return `${startLeft + wiggle}%`;
 };
 
+const timelineYear = computed(() => {
+  return calendarYearToYear(props.year, props.totalYears);
+});
+
 const show = computed(() => {
   const timelineYear = calendarYearToYear(props.year, props.totalYears);
 
-  const isWithinTimelineRange = timelineYear > 0;
+  const isWithinTimelineRange = timelineYear >= 0;
 
   if (isWithinTimelineRange) {
     return props.scale === 1 || props.kind == Kind.RANGE;
@@ -116,7 +120,7 @@ onUpdated(() => {
 
     a {
       pointer-events: auto;
-      
+
       &:hover {
         z-index: 10;
         background: #151618c4;

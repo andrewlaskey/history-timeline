@@ -318,6 +318,13 @@ export const events: DataPoint[] = [
     year: '399 CE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'North American megafauna extinctions',
+    link: 'https://en.wikipedia.org/wiki/Late_Pleistocene_extinctions#North_America',
+    year: '10000 BCE',
+    kind: Kind.RANGE,
+    category: Category.NATURE,
+    range: 2400
   }
-
 ];

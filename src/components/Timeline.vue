@@ -18,6 +18,9 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
 <template>
   <div class="timeline">
     <div class="axis-lines">
+      <div class="grid-line">
+        <span>0 ({{ yearToCalendarYear(0, totalYears) }})</span>
+      </div>
       <div
         class="grid-line"
         v-for="n in numGridLines"
@@ -47,6 +50,7 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
 .timeline {
   position: relative;
   margin: 0 auto;
+  margin-top: 100px;
   height: 12000px;
   width: 100%;
   max-width: 600px;
