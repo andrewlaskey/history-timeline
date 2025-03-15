@@ -112,26 +112,23 @@ onUpdated(() => {
 
 <style lang="scss" scoped>
 .timeline-entry {
-  &:hover {
-    z-index: 10;
+    pointer-events: none;
+
+    a {
+      pointer-events: auto;
+      
+      &:hover {
+        z-index: 10;
+        background: #151618c4;
+      }
+    }
   }
-}
 
 .event,
 .range {
   position: absolute;
   padding: 4px 8px;
   border-top: 2px solid;
-
-  &:hover,
-  &:focus,
-  &:active {
-    z-index: 999;
-
-    a {
-      background: #151618c4;
-    }
-  }
 }
 
 .event a,

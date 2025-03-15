@@ -24,7 +24,7 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
         :key="n"
         :style="{ top: `${n * range}px` }"
       >
-        {{ (n * range * scale).toLocaleString() }} ({{ yearToCalendarYear(n * range * scale, totalYears) }})
+        <span>{{ (n * range * scale).toLocaleString() }} ({{ yearToCalendarYear(n * range * scale, totalYears) }})</span>
       </div>
     </div>
 
@@ -68,5 +68,11 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
   border-top: 1px solid;
   text-align: left;
   user-select: none;
+
+  span {
+    position: relative;
+    background: rgba(#151618, 1);
+    z-index: 99;
+  }
 }
 </style>

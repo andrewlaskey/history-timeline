@@ -48,5 +48,13 @@ export const ancient: DataPoint[] = [
         year: '300000 BCE',
         range: 300000,
         category: Category.NATURE
+    },
+    {
+        label: 'Homo heidelbergensis',
+        link: 'https://en.wikipedia.org/wiki/Homo_heidelbergensis',
+        kind: Kind.RANGE,
+        year: '590000 BCE',
+        range: 300000,
+        category: Category.NATURE
     }
 ];
