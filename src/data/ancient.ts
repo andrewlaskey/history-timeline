@@ -29,8 +29,16 @@ export const ancient: DataPoint[] = [
         label: 'Neanderthal goes extinct',
         link: 'https://en.wikipedia.org/wiki/Neanderthal_extinction',
         kind: Kind.RANGE,
-        year: '41000 BCE',
+        year: '40000 BCE',
         range: 6000,
+        category: Category.NATURE
+    },
+    {
+        label: 'Homo erectus goes extinct',
+        link: 'https://humanorigins.si.edu/research/whats-hot-human-origins/extinction-homo-erectus',
+        kind: Kind.RANGE,
+        year: '117000 BCE',
+        range: 9000,
         category: Category.NATURE
     },
     {
@@ -56,5 +64,21 @@ export const ancient: DataPoint[] = [
         year: '590000 BCE',
         range: 300000,
         category: Category.NATURE
+    },
+    {
+        label: 'Venus of Willendorf',
+        link: 'https://en.wikipedia.org/wiki/Venus_of_Willendorf',
+        kind: Kind.RANGE,
+        year: '33000 BCE',
+        range: 13000,
+        category: Category.ARCHEOLOGICAL
+    },
+    {
+        label: 'Lion-man',
+        link: 'https://en.wikipedia.org/wiki/Lion-man',
+        kind: Kind.RANGE,
+        year: '41500 BCE',
+        range: 6000,
+        category: Category.ARCHEOLOGICAL
     }
 ];

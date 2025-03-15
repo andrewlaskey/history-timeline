@@ -138,14 +138,6 @@ export const people: DataPoint[] = [
     range: 56
   },
   {
-    label: 'Theodora',
-    link: 'https://en.wikipedia.org/wiki/Theodora_(empress)',
-    year: '815 CE',
-    kind: Kind.RANGE,
-    category: Category.PERSON,
-    range: 32
-  },
-  {
     label: 'Julius Caesar',
     link: 'https://en.wikipedia.org/wiki/Julius_Caesar',
     year: '100 BCE',
@@ -160,5 +152,13 @@ export const people: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.PERSON,
     range: 96
+  },
+  {
+    label: 'Kondiaronk',
+    link: 'https://en.wikipedia.org/wiki/Kondiaronk',
+    year: '1625 CE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 76
   }
 ];

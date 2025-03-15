@@ -311,5 +311,13 @@ export const events: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.ARCHEOLOGICAL,
     range: 250
+  },
+  {
+    label: 'Iron pillar of Delhi',
+    link: 'https://en.wikipedia.org/wiki/Iron_pillar_of_Delhi',
+    year: '399 CE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
   }
+
 ];
