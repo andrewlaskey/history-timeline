@@ -17,4 +17,5 @@ export interface DataPoint {
   kind: Kind
   category: Category
   link?: string;
+  visibleOnScale?: number[];
 }

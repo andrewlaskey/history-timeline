@@ -83,7 +83,10 @@ const selection = ref('Avg. Human Lifespan')
   display: flex;
   flex-direction: column-reverse;
   width: 100%;
-  max-width: 28rem;
+
+  @media screen and (min-width: 700px) {
+    max-width: 28rem;
+  }
 }
 
 .compare-input {
@@ -94,6 +97,7 @@ const selection = ref('Avg. Human Lifespan')
     outline: none;
     color: #dde5ee;
     border: 1px solid #dde5ee;
+    appearance: menulist;
   }
 }
 

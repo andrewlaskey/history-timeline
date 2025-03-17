@@ -6,14 +6,16 @@ export const events: DataPoint[] = [
     link: 'https://en.wikipedia.org/wiki/G%C3%B6bekli_Tepe',
     year: '9510 BCE',
     kind: Kind.EVENT,
-    category: Category.ARCHEOLOGICAL
+    category: Category.ARCHEOLOGICAL,
+    visibleOnScale: [10,50]
   },
   {
     label: 'Doggerland submerged',
     link: 'https://en.wikipedia.org/wiki/Doggerland',
     year: '6520 BCE',
     kind: Kind.EVENT,
-    category: Category.NATURE
+    category: Category.NATURE,
+    visibleOnScale: [10,50]
   },
   {
     label: 'Giza Pyramid built',
@@ -241,7 +243,7 @@ export const events: DataPoint[] = [
   {
     label: 'Uruk peaks at ~40,000 residents',
     link: 'https://en.wikipedia.org/wiki/Uruk',
-    year: '3104 BCE',
+    year: '3084 BCE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
   },
@@ -318,6 +320,21 @@ export const events: DataPoint[] = [
     year: '399 CE',
     kind: Kind.EVENT,
     category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Start of Mayan Long Count Calendar',
+    link: 'https://en.wikipedia.org/wiki/Maya_calendar#Long_Count',
+    year: '3114 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL
+  },
+  {
+    label: 'Machu Picchu occupied',
+    link: 'https://en.wikipedia.org/wiki/Machu_Picchu',
+    year: '1438 CE',
+    kind: Kind.RANGE,
+    category: Category.ARCHEOLOGICAL,
+    range: 34
   },
   {
     label: 'North American megafauna extinctions',

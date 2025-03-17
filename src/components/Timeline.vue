@@ -17,6 +17,19 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
 
 <template>
   <div class="timeline">
+    <TimelineEntry
+      v-for="entry in dataPoints"
+      :key="entry.label"
+      :year="entry.year"
+      :range="entry.range"
+      :kind="entry.kind"
+      :category="entry.category"
+      :link="entry.link"
+      :label="entry.label"
+      :scale="scale"
+      :total-years="totalYears"
+      :visible-on-scale="entry.visibleOnScale"
+    />
     <div class="axis-lines">
       <div class="grid-line">
         <span>0 ({{ yearToCalendarYear(0, totalYears) }})</span>
@@ -30,19 +43,6 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
         <span>{{ (n * range * scale).toLocaleString() }} ({{ yearToCalendarYear(n * range * scale, totalYears) }})</span>
       </div>
     </div>
-
-    <TimelineEntry
-      v-for="entry in dataPoints"
-      :key="entry.label"
-      :year="entry.year"
-      :range="entry.range"
-      :kind="entry.kind"
-      :category="entry.category"
-      :link="entry.link"
-      :label="entry.label"
-      :scale="scale"
-      :total-years="totalYears"
-    />
   </div>
 </template>
 
@@ -76,7 +76,6 @@ const dataPoints = [...events, ...people, ...states, ...ancient];
   span {
     position: relative;
     background: rgba(#151618, 1);
-    z-index: 99;
   }
 }
 </style>

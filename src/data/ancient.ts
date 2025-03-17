@@ -50,12 +50,12 @@ export const ancient: DataPoint[] = [
         category: Category.ARCHEOLOGICAL
     },
     {
-        label: 'Homo sapiens',
-        link: 'https://en.wikipedia.org/wiki/Human#Evolution',
-        kind: Kind.RANGE,
+        label: 'Oldest found Homo sapiens remains',
+        link: 'https://en.wikipedia.org/wiki/Jebel_Irhoud',
+        kind: Kind.EVENT,
         year: '300000 BCE',
-        range: 300000,
-        category: Category.NATURE
+        category: Category.NATURE,
+        visibleOnScale: [10, 50]
     },
     {
         label: 'Homo heidelbergensis',
@@ -80,5 +80,37 @@ export const ancient: DataPoint[] = [
         year: '41500 BCE',
         range: 6000,
         category: Category.ARCHEOLOGICAL
-    }
+    },
+    {
+        label: 'Possible origin of Seven Sisters myth?',
+        link: 'https://youtube.com/watch?v=_qyjKND3dAE&si=XW98ngaGLv8-Cdas',
+        kind: Kind.EVENT,
+        year: '100000 BCE',
+        category: Category.NATURE,
+        visibleOnScale: [10, 50]
+    },
+    {
+        label: 'Last Glacial Maximum',
+        link: 'https://en.wikipedia.org/wiki/Last_Glacial_Maximum',
+        kind: Kind.RANGE,
+        year: '26000 BCE',
+        range: 6000,
+        category: Category.NATURE
+    },
+    {
+        label: 'Late Pleistocene',
+        link: 'https://en.wikipedia.org/wiki/Late_Pleistocene',
+        kind: Kind.RANGE,
+        year: '129000 BCE',
+        range: 117300,
+        category: Category.POLITICAL
+    },
+    {
+        label: 'Rising Star Cave H. naledi bones',
+        link: 'https://en.wikipedia.org/wiki/Rising_Star_Cave',
+        kind: Kind.RANGE,
+        year: '335000 BCE',
+        range: 99000,
+        category: Category.NATURE
+    },
 ];

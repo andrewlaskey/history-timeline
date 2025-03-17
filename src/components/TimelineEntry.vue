@@ -14,6 +14,7 @@ const props = defineProps<{
   category: string,
   kind: string,
   link?: string,
+  visibleOnScale?: number[],
   scale: number,
   totalYears: number
 }>();
@@ -62,8 +63,10 @@ const show = computed(() => {
 
   const isWithinTimelineRange = timelineYear >= 0;
 
+  const isScaleVisibilityOverride = props.visibleOnScale && props.visibleOnScale.includes(props.scale);
+
   if (isWithinTimelineRange) {
-    return props.scale === 1 || props.kind == Kind.RANGE;
+    return props.scale === 1 || props.kind == Kind.RANGE || isScaleVisibilityOverride;
   }
 
   return false;

@@ -19,7 +19,11 @@ export const compareList: Comparable[] = [
     },
     {
       range: 26000,
-      label: 'Axial precession'
+      label: 'Axial Precession'
+    },
+    {
+      range: 2156,
+      label: 'Astrological Age'
     }
   //   ...people.map(({ range, label }) => ({ range: range || 80, label })),
   //   ...states.map(({ range, label }) => ({ range: range || 80, label })),
