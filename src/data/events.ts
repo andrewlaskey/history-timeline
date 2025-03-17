@@ -90,11 +90,12 @@ export const events: DataPoint[] = [
     category: Category.ARCHEOLOGICAL
   },
   {
-    label: 'Cultivation of barley and wheat',
-    link: 'https://en.wikipedia.org/wiki/Prehistory#Neolithic',
-    year: '7005 BCE',
-    kind: Kind.EVENT,
-    category: Category.ARCHEOLOGICAL
+    label: 'Domestication of wheat',
+    link: 'https://en.wikipedia.org/wiki/Einkorn',
+    year: '8650 BCE',
+    kind: Kind.RANGE,
+    category: Category.ARCHEOLOGICAL,
+    range: 700
   },
   {
     label: 'Colosseum built',
@@ -343,5 +344,13 @@ export const events: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.NATURE,
     range: 2400
-  }
+  },
+  {
+    label: 'Domestication of Maize',
+    link: 'https://en.wikipedia.org/wiki/Maize',
+    year: '7000 BCE',
+    kind: Kind.EVENT,
+    category: Category.ARCHEOLOGICAL,
+    visibleOnScale: [10, 50]
+  },
 ];

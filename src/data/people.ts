@@ -160,5 +160,13 @@ export const people: DataPoint[] = [
     kind: Kind.RANGE,
     category: Category.PERSON,
     range: 76
+  },
+  {
+    label: 'Koelbjerg Man',
+    link: 'https://en.wikipedia.org/wiki/Koelbjerg_Man',
+    year: '7998 BCE',
+    kind: Kind.RANGE,
+    category: Category.PERSON,
+    range: 25
   }
 ];

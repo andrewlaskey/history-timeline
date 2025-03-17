@@ -24,6 +24,10 @@ export const compareList: Comparable[] = [
     {
       range: 2156,
       label: 'Astrological Age'
+    },
+    {
+      range: 3500,
+      label: 'General Sherman Tree Age'
     }
   //   ...people.map(({ range, label }) => ({ range: range || 80, label })),
   //   ...states.map(({ range, label }) => ({ range: range || 80, label })),
