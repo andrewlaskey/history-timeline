@@ -113,4 +113,12 @@ export const ancient: DataPoint[] = [
         range: 99000,
         category: Category.NATURE
     },
+    {
+        label: 'Mtoto',
+        link: 'https://www.smithsonianmag.com/science-nature/scientists-discover-oldest-known-human-grave-africa-180977659/',
+        kind: Kind.RANGE,
+        year: '76000 BCE',
+        range: 3,
+        category: Category.PERSON
+    },
 ];
